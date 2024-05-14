@@ -19,7 +19,7 @@ public class AutomationTestingPractice extends TestBase {
 	@FindBy(xpath="//h1[contains(text(),'Automation Testing Practice')]")
 	private WebElement heading;
 	
-	@FindBy(xpath="//input[@id='name']")
+	@FindBy(xpath="//input[@id='naam']")
 	private WebElement name;
 	
 	@FindBy(xpath="//input[@id='email']")
@@ -62,33 +62,38 @@ public class AutomationTestingPractice extends TestBase {
 	
 	public void varify_heading(String header) {
 		header=heading.getAccessibleName();
+		log.info("This the Heading of the page"+header);
 		System.out.println(header);
 		//log.info("Varify the Heading");
 		Assert.assertEquals(header.trim(), "Automation Testing Practice");
+		log.info("Heading is successfully matched with the expected one");
 		
 	}
 	
 	public void varify_name(String username) {
-		//log.info("Varify the Name Field is Enable");
+	//	log.info("Varify the Name Field is Enable");
 		Assert.assertTrue(name.isEnabled());
+		log.info("user name field is enabled");
 		name.clear();
+		log.info("user field is cleared");
 		name.sendKeys(username);
+		log.info("user name is passed to name field:"+username);
 	}
 	
 	public void varify_email(String userEmail) {
-	//	log.info("Varify the Email field is enable");
+	//log.info("Varify the Email field is enable");
 		Assert.assertTrue(email.isEnabled());
 		email.clear();
 		email.sendKeys(userEmail);
 	}
 	
 	public void varify_phone(String userPhone) {
-	//	log.info("Varify the Phone field is enable");
+	//log.info("Varify the Phone field is enable");
 		Assert.assertTrue(phone.isEnabled());
-	//	log.info("Clear the Phone field before providing the input");
+	//log.info("Clear the Phone field before providing the input");
 		phone.clear();
 		phone.sendKeys(userPhone);
-		//log.info(userPhone+" is typed into the phone field");
+	//	log.info(userPhone+" is typed into the phone field");
 	}
 	
 	public void varify_address(String userAddress) {

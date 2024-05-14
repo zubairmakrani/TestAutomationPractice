@@ -1,12 +1,16 @@
 package com.blogspot.testautomationpractice.TestLayer;
 
 import java.io.IOException;
+
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.blogspot.testautomationpractice.PageLayer.AutomationTestingPractice;
 import com.blogspot.testautomationpractice.TestBase.TestBase;
 
+//@Listeners(com.blogspot.testautomationpractice.utility.ListenerSetup.class)
 public class AutomationTestingPracticePageTest extends TestBase {
 
+	
 	@Test
 	public void automationTestingPractice_functionality() throws IOException {
 		
@@ -29,5 +33,4 @@ public class AutomationTestingPracticePageTest extends TestBase {
 
 }
 
-
-//Excelsheet Logger Extent Report Listener Screenshot  BDD Git CI/CD 
+//Excel sheet BDD Git CI/CD 
